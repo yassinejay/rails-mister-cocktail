@@ -1,0 +1,17 @@
+<h1><%= @cocktail.name%></h1>
+<div class="container">
+	<li><%@cocktail.doses.each do |dose|%>
+		<%= dose.description%>
+		<%= link_to "🗑", dose_path(@cocktail,dose), method: :delete %>
+		<%end%>
+	</li><hr>
+</div>
+<div class = "flex-box">
+	<div class= "flex-link">
+		<%= link_to 'Back to Cocktails', cocktails_path, class: "btn btn-primary"%>
+	</div>	
+	<div class= "flex-link">
+	<%= link_to 'add new dose', new_cocktail_dose_path(@cocktail), class: "btn btn-primary"%>
+	</div>
+</div>	
+

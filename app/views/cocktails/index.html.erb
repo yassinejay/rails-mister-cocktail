@@ -1,0 +1,18 @@
+
+<h1 class= "text-center"> All Cocktails </h1>
+
+<div class="container">
+	<% @cocktails.each do |cocktail| %>
+		
+		<h2><%= cocktail.name%></h2>
+	<div>
+	<%= link_to 'all Doses', cocktail_path(cocktail), class: "btn btn-success"%><hr>
+	</div>
+	<%end%>
+	<div class="flex-box">
+		<div class= "flex-link">
+		<%= link_to 'Add Cocktails', new_cocktail_path, class: "btn btn-primary"%><hr>
+		</div>
+	</div>
+</div>
+
